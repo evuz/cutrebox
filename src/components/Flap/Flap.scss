@@ -1,0 +1,42 @@
+.flap {
+  $height: 12px;
+  height: $height;
+  display: flex;
+
+  &__content {
+    height: 100%;
+    flex: 1;
+    border-top: 1px solid black;
+  }
+
+  &__triangle {
+    height: 100%;
+    width: $height;
+    overflow: hidden;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 200%;
+      height: 1px;
+      background-color: black;
+    }
+
+    &--left {
+      &::after {
+        left: 0;
+        transform: rotate(-45deg);
+        transform-origin: left;
+      }
+    }
+
+    &--right {
+      &::after {
+        right: 0;
+        transform: rotate(45deg);
+        transform-origin: right;
+      }
+    }
+  }
+}
