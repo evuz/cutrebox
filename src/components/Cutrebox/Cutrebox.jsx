@@ -3,11 +3,15 @@ import React from 'react';
 import Front from '../Front';
 
 import './Cutrebox.scss';
+import Strip from '../Strip';
 
-function Cutrebox(params) {
+function Cutrebox() {
   return (
     <div className="cutrebox">
-      <Front />
+      <div className="cutrebox__content">
+        <Strip top />
+        <Front />
+      </div>
     </div>
   );
 }
