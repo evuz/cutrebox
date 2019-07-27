@@ -4,7 +4,6 @@ import Cover from '../Cover';
 import Flap from '../Flap';
 
 import './Front.scss';
-import Strip from '../Strip';
 
 function Front() {
   return (

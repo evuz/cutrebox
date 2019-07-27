@@ -6,7 +6,6 @@ import './Cutrebox.scss';
 import Spine from '../Spine/Spine';
 import Back from '../Back';
 import Strip from '../Strip';
-import Flap from '../Flap';
 
 function Cutrebox() {
   return (
