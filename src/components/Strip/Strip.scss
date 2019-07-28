@@ -8,4 +8,17 @@
     width: 100%;
     height: $height;
   }
+
+  &__flap {
+    &--mr {
+      margin-right: 12px;
+    }
+    &--ml {
+      margin-left: 12px;
+    }
+  }
+}
+
+.bg-red {
+  background-color: red;
 }

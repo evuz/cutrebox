@@ -1,35 +1,33 @@
 import React from 'react';
 
-import './Strip.scss';
-import mixinsClassnames from '../../utils/mixinsClassnames';
 import Flap from '../Flap';
+import mixinsClassnames from '../../utils/mixinsClassnames';
 
-function Strip({
-  horizontal,
-  top,
-  bottom,
-  left,
-  right,
-  children,
-  height,
-  width
-}) {
+import './Strip.scss';
+
+function Strip({ horizontal, top, bottom, left, right, children, className }) {
   const classNames = mixinsClassnames({
     strip: true,
     'strip--horizontal': horizontal
   });
-  const style = { height, width };
+  const flapClassNames = mixinsClassnames({
+    'strip__flap--mr': right,
+    'strip__flap--ml': left
+  });
+  const containerClassNames = mixinsClassnames({
+    strip__container: true,
+    col: true,
+    [className]: className
+  });
   return (
-    <div className="col">
-      {top ? <Flap /> : null}
+    <div className={containerClassNames}>
+      {top ? <Flap className={flapClassNames} /> : null}
       <div className="row fill">
-        {left ? <Flap /> : null}
-        <div style={style} className={classNames}>
-          {children}
-        </div>
-        {right ? <Flap /> : null}
+        {left ? <Flap position="left" /> : null}
+        <div className={classNames}>{children}</div>
+        {right ? <Flap position="right" /> : null}
       </div>
-      {bottom ? <Flap /> : null}
+      {bottom ? <Flap className={flapClassNames} position="bottom" /> : null}
     </div>
   );
 }
