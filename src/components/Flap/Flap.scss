@@ -3,6 +3,10 @@
   height: $height;
   display: flex;
 
+  &--invert {
+    transform: rotate(180deg);
+  }
+
   &__content {
     height: 100%;
     flex: 1;
@@ -17,7 +21,7 @@
     &:after {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: -1px;
       width: 200%;
       height: 1px;
       background-color: black;
@@ -36,6 +40,28 @@
         right: 0;
         transform: rotate(45deg);
         transform-origin: right;
+      }
+    }
+  }
+
+  &--vertical {
+    flex-direction: column;
+    height: 100%;
+
+    .flap {
+      &__content {
+        height: auto;
+        width: 100%;
+        flex: 1;
+        border-left: 1px solid black;
+        border-top: none;
+      }
+      &__triangle {
+        height: $height;
+        width: 12px;
+        &:after {
+          bottom: 0;
+        }
       }
     }
   }
