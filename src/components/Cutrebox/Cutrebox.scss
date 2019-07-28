@@ -2,10 +2,17 @@
     min-width: 100vw;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    &__content {
+    &__vertical-flap-height {
+        height: 307px * 2 + 12px;
         display: flex;
+    }
+
+    &__vertical-flap {
+        margin-left: -12px;
+        width: 207px * 2 + 12px * 2;
     }
 }
