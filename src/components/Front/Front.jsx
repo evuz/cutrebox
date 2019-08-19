@@ -12,7 +12,7 @@ function Front() {
       <Cover>
         <img
           className="front__image"
-          src="https://www.dccomics.com/sites/default/files/comic_reader/SUPER01_CVR_1500_5b464c682d9de8.64269664.jpg"
+          src="cover.jpg"
           alt="front cover"
         />
       </Cover>

@@ -9,7 +9,7 @@ import Strip from '../Strip';
 
 function Cutrebox() {
   return (
-    <div className="cutrebox">
+    <div id="cutrebox" className="cutrebox">
       <div className="col">
         <div className="row">
           <Back />
@@ -20,7 +20,13 @@ function Cutrebox() {
           </div>
         </div>
         <div className="row">
-          <Strip className='cutrebox__vertical-flap' horizontal bottom right left />
+          <Strip
+            className="cutrebox__vertical-flap"
+            horizontal
+            bottom
+            right
+            left
+          />
         </div>
       </div>
     </div>
