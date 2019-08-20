@@ -47,14 +47,27 @@
   &--vertical {
     flex-direction: column;
     height: 100%;
+    width: $height;
 
     .flap {
       &__content {
         height: auto;
         width: 100%;
         flex: 1;
-        border-left: 1px solid black;
-        border-top: none;
+        border: none;
+        // HACK to show border with html2canvas
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 1px;
+          background-color: black;
+        }
+        // border: 1px solid black;
+        // border-right: none;
       }
       &__triangle {
         height: $height;
