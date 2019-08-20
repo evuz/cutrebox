@@ -19,7 +19,9 @@ function Spine({ title, vol }) {
                 alt="logo"
               />
             </div>
-            <div className="spine__title">{title}</div>
+            <div className="spine__title">
+              <span className="spine__title--rotate">{title}</span>
+            </div>
             <div className="spine__heroe">
               <img
                 className="spine__heroe-img"
